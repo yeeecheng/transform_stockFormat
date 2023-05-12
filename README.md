@@ -15,3 +15,4 @@
 >python use_data.py --save <save_filepath> --file <stock_filepath> --symbol <symbol_data>
 
 * symbol_data create as symbol.txt
+* classification -> down : 0 , up : 1 ,flatten : 2
