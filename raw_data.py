@@ -84,7 +84,7 @@ def parse_opt(known = False):
     ROOT = os.getcwd()
     parser = argparse.ArgumentParser()
     parser.add_argument("--save",type=str, default = r"./stock_raw")
-    parser.add_argument("--file",type= str ,require =True , default=r"")
+    parser.add_argument("--file",type= str  , default=r"./examples/raw_using")
 
 
     return parser.parse_known_args()[0] if known else parser.parse_args()

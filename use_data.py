@@ -24,7 +24,7 @@ def convert(args):
     symbols= create_symbol_list(args["symbol"])
     for stock in symbols:
         target_stock = stock
-        target_stockFilePath = args["save"]+target_stock
+        target_stockFilePath = args["save"]+"/"+target_stock
         print(target_stockFilePath)
         createDir(target_stockFilePath)
 
@@ -106,9 +106,9 @@ def parse_opt(known = False):
 
     ROOT = os.getcwd()
     parser = argparse.ArgumentParser()
-    parser.add_argument("--save",type=str, default = r"./stock_dataset/")
-    parser.add_argument("--file",type= str ,required=True ,default=r"")
-    parser.add_argument("--symbol",type= str,required=True ,default=r"./symbol.txt")
+    parser.add_argument("--save",type=str , default = r"./stock_dataset")
+    parser.add_argument("--file",type= str  ,default = r"./examples/use_using")
+    parser.add_argument("--symbol",type= str ,default= r"./examples/symbols.txt")
 
 
     return parser.parse_known_args()[0] if known else parser.parse_args()
